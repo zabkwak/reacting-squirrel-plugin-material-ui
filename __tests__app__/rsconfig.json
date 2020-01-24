@@ -1,0 +1,12 @@
+{
+	"$schema": "../node_modules/reacting-squirrel/schemas/rsconfig.schema.json",
+	"routes": [
+		{
+			"route": "/",
+			"component": "pages/home",
+			"title": "Home"
+		}
+	],
+	"appDir": "./__tests__app__/app",
+	"staticDir": "./__tests__app__/public"
+}
