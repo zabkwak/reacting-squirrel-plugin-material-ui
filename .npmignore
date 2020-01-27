@@ -2,4 +2,5 @@
 /.npmignore
 /.gitignore
 /__tests__
+/__tests__app__
 /tsconfig.json

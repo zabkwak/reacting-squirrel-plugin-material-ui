@@ -23,6 +23,9 @@ export default class Layout extends Base {
 		);
 	}
 
+	/**
+	 * Gets the theme for the layout.
+	 */
 	protected _getTheme(): ThemeOptions {
 		return {};
 	}
