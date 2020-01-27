@@ -8,5 +8,13 @@
 		}
 	],
 	"appDir": "./__tests__app__/app",
-	"staticDir": "./__tests__app__/public"
+	"staticDir": "./__tests__app__/public",
+	"dev": true,
+	"createMissingComponents": true,
+	"cookies": {
+		"secure": false
+	},
+	"plugins": [
+		"./dist"
+	]
 }
