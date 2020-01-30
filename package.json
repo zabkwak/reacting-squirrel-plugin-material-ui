@@ -32,28 +32,28 @@
 		"node": ">=8.9"
 	},
 	"dependencies": {
-		"@material-ui/core": "^4.9.0",
-		"clean-css": "^4.2.2",
+		"clean-css": "^4.2.3",
 		"md5": "^2.2.1",
 		"prop-types": "^15.7.2",
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0",
-		"reacting-squirrel": "^0.16.3",
 		"uniqid": "^5.2.0"
 	},
 	"devDependencies": {
-		"@types/chai": "^4.2.2",
+		"@material-ui/core": "^4.9.0",
+		"@types/chai": "^4.2.8",
 		"@types/clean-css": "^4.2.1",
 		"@types/core-js": "^2.5.2",
 		"@types/md5": "^2.1.33",
 		"@types/mocha": "^5.2.7",
-		"@types/node": "^10.14.18",
+		"@types/node": "^10.17.14",
 		"@types/prop-types": "^15.7.3",
 		"@types/react": "^16.9.19",
 		"@types/react-dom": "^16.9.5",
 		"@types/uniqid": "^4.1.3",
 		"chai": "^4.2.0",
 		"mocha": "^6.2.0",
+		"reacting-squirrel": "^0.16.3",
 		"run-script-os-fix": "^1.0.4",
 		"source-map-support": "^0.5.13",
 		"ts-node": "^8.3.0",
@@ -62,7 +62,7 @@
 		"typescript": "^3.6.3"
 	},
 	"peerDependencies": {
-		"reacting-squirrel": "^0.16.0",
+		"reacting-squirrel": "^0.16.3",
 		"@material-ui/core": "^4.9.0"
 	},
 	"repository": {
