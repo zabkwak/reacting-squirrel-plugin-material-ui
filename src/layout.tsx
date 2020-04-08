@@ -10,7 +10,7 @@ export default class Layout extends Base {
 	public renderContainer(): JSX.Element {
 		return (
 			<ThemeProvider theme={this._theme}>
-				{super.renderContainer()}
+				{this.renderThemeContainer()}
 			</ThemeProvider>
 		);
 	}
@@ -21,6 +21,10 @@ export default class Layout extends Base {
 				<CircularProgress />
 			</div>
 		);
+	}
+
+	public renderThemeContainer(): JSX.Element {
+		return super.renderContainer();
 	}
 
 	/**
