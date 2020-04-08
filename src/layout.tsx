@@ -5,7 +5,7 @@ import { Layout as Base } from 'reacting-squirrel/server';
 
 export default class Layout extends Base {
 
-	private _theme: Theme = createMuiTheme(this._getTheme());
+	protected _theme: Theme = createMuiTheme(this._getTheme());
 
 	public renderContainer(): JSX.Element {
 		return (

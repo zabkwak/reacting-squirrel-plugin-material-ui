@@ -79,3 +79,7 @@ export default class MaterialUIPlugin extends Plugin {
 		];
 	}
 }
+
+export {
+	Layout,
+};
