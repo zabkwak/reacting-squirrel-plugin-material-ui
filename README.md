@@ -15,7 +15,7 @@ import MUIPlugin from 'reacting-squirrel-plugin-material-ui';
 const app = new Server(/* ...options */);
 app.registerPlugin(new MUIPlugin(/* ...options */));
 // ... setup of the server
-app.starr();
+app.start();
 ```
 ### RSConfig
 ```json
