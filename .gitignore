@@ -2,3 +2,6 @@
 /dist
 /index.js
 /package-lock.json
+
+/__tests__app__/app/~rs
+/__tests__app__/public

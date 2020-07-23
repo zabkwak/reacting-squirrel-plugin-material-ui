@@ -21,7 +21,8 @@
 		"docs_generate": "./node_modules/.bin/typedoc --out docs ./src",
 		"docs": "npm run clear_docs && npm run docs_generate && npm run create_nojekyll",
 		"test": "./node_modules/.bin/mocha -r ts-node/register __tests__/**/*.ts",
-		"test:app": "npm run clear && npm run build_ts && ./node_modules/.bin/rs-start-server --rsConfig=./__tests__app__/rsconfig.json",
+		"test:app": "npm run clear && npm run build_ts && npm run test:start",
+		"test:start": "./node_modules/.bin/rs-start-server --rsConfig=./__tests__app__/rsconfig.json",
 		"start": "npm run clear && npm run build_ts && node -r source-map-support/register index.js",
 		"prepublish": "npm run clear && npm run build_ts",
 		"postpublish": "npm run clear"
