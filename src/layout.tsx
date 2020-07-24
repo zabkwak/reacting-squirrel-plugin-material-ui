@@ -1,4 +1,4 @@
-import { AppBar, CircularProgress, createMuiTheme, Theme, ThemeProvider, Typography } from '@material-ui/core';
+import { CircularProgress, createMuiTheme, Theme, ThemeProvider } from '@material-ui/core';
 import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
 import * as React from 'react';
 import { ILayoutProps, Layout as Base } from 'reacting-squirrel/server';
@@ -14,9 +14,6 @@ export default class Layout extends Base<IProps> {
 	public renderContainer(): JSX.Element {
 		return (
 			<ThemeProvider theme={this._theme}>
-				<AppBar position="static">
-					<Typography variant="h6">Title</Typography>
-				</AppBar>
 				{this.renderThemeContainer()}
 			</ThemeProvider>
 		);
