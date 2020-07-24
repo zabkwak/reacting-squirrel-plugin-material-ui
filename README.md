@@ -22,13 +22,24 @@ app.start();
 {
 	// ...setup of the server
 	"plugins": [
-		"reacting-squirrel-plugin-material-ui"
+		[
+			"reacting-squirrel-plugin-material-ui",
+			{
+				"theme": "./theme"
+			}
+		]
 	]
 }
 ```
+
+## Themes
+The theme registered via plugin options must be a TS or JS file with default export of `ThemeOptions` of the Material UI.
+The theme is used by `ThemeProvider` on the server and client sides.
 
 ## Options
 | option | type | description | default |
 | :--- | :--- | :--- | :--- |
 | loadRoboto | boolean | Indicates if the Roboto font from the googleapis should be loaded. | `true` |
 | forcePluginLayout | boolean | Indicates if the Plugin layout should be forced if the layout provided is not extending the Plugin Layout. | `true` |
+| theme | string | Relative path to the theme from the app directory. | `null` |
+| forcePluginLayout | boolean | Indicates if the theme should be registered to the Layout using `eval`. It can be dangerous. | `true` |
