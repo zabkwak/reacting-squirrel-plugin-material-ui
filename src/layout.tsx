@@ -1,7 +1,7 @@
 import { AppBar, CircularProgress, createMuiTheme, Theme, ThemeProvider, Typography } from '@material-ui/core';
 import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
 import * as React from 'react';
-import { Layout as Base, ILayoutProps } from 'reacting-squirrel/server';
+import { ILayoutProps, Layout as Base } from 'reacting-squirrel/server';
 
 interface IProps extends ILayoutProps {
 	theme: ThemeOptions;
@@ -9,7 +9,7 @@ interface IProps extends ILayoutProps {
 
 export default class Layout extends Base<IProps> {
 
-	protected _theme: Theme = createMuiTheme({ ...this.props.theme, ...this._getTheme() });
+	protected _theme: Theme = createMuiTheme({ ...this.props?.theme, ...this._getTheme() });
 
 	public renderContainer(): JSX.Element {
 		return (
