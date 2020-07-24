@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IOptions | reacting-squirrel-plugin-material-ui - v1.2.1</title>
+	<title>IOptions | reacting-squirrel-plugin-material-ui - v2.0.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">reacting-squirrel-plugin-material-ui - v1.2.1</a>
+					<a href="../index.html" class="title">reacting-squirrel-plugin-material-ui - v2.0.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -91,8 +91,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ioptions.html#evalservertheme" class="tsd-kind-icon">eval<wbr>Server<wbr>Theme</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ioptions.html#forcepluginlayout" class="tsd-kind-icon">force<wbr>Plugin<wbr>Layout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ioptions.html#loadroboto" class="tsd-kind-icon">load<wbr>Roboto</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ioptions.html#theme" class="tsd-kind-icon">theme</a></li>
 							</ul>
 						</section>
 					</div>
@@ -101,12 +103,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="evalservertheme" class="tsd-anchor"></a>
+					<h3>eval<wbr>Server<wbr>Theme</h3>
+					<div class="tsd-signature tsd-kind-icon">eval<wbr>Server<wbr>Theme<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zabkwak/reacting-squirrel-plugin-material-ui/blob/a71fadb/src/index.ts#L35">src/index.ts:35</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Indicates if the theme should be registered to the Layout using <code>eval</code>. It can be dangerous.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>true</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="forcepluginlayout" class="tsd-anchor"></a>
 					<h3>force<wbr>Plugin<wbr>Layout</h3>
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Plugin<wbr>Layout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zabkwak/reacting-squirrel-plugin-material-ui/blob/6144e5a/src/index.ts#L21">src/index.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/zabkwak/reacting-squirrel-plugin-material-ui/blob/a71fadb/src/index.ts#L25">src/index.ts:25</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -126,7 +148,7 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Roboto<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zabkwak/reacting-squirrel-plugin-material-ui/blob/6144e5a/src/index.ts#L16">src/index.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/zabkwak/reacting-squirrel-plugin-material-ui/blob/a71fadb/src/index.ts#L20">src/index.ts:20</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -136,6 +158,26 @@
 						<dl class="tsd-comment-tags">
 							<dt>default</dt>
 							<dd><p>true</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="theme" class="tsd-anchor"></a>
+					<h3>theme</h3>
+					<div class="tsd-signature tsd-kind-icon">theme<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zabkwak/reacting-squirrel-plugin-material-ui/blob/a71fadb/src/index.ts#L30">src/index.ts:30</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Relative path to the theme from the app directory.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
 							</dd>
 						</dl>
 					</div>
@@ -163,6 +205,9 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_style_store_.html">&quot;style-<wbr>store&quot;</a>
 					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_theme_provider_.html">&quot;theme-<wbr>provider&quot;</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -176,10 +221,16 @@
 						<a href="_index_.ioptions.html" class="tsd-kind-icon">IOptions</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_index_.ioptions.html#evalservertheme" class="tsd-kind-icon">eval<wbr>Server<wbr>Theme</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_index_.ioptions.html#forcepluginlayout" class="tsd-kind-icon">force<wbr>Plugin<wbr>Layout</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_index_.ioptions.html#loadroboto" class="tsd-kind-icon">load<wbr>Roboto</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_index_.ioptions.html#theme" class="tsd-kind-icon">theme</a>
 							</li>
 						</ul>
 					</li>
