@@ -15,6 +15,11 @@
 		"secure": false
 	},
 	"plugins": [
-		"./dist"
+		[
+			"./dist",
+			{
+				"theme": "./theme.js"
+			}
+		]
 	]
 }

@@ -7,6 +7,7 @@ import Server, { IRenderLayoutData, IRequest, IResponse } from 'reacting-squirre
 import * as uniqid from 'uniqid';
 
 import StyleStore from '../style-store';
+import Plugin from '../';
 
 export default (server: Server) => (req: IRequest, res: IResponse, next: () => void) => {
 	const { layoutComponent, cssDir } = server.getConfig();
@@ -38,6 +39,7 @@ export default (server: Server) => (req: IRequest, res: IResponse, next: () => v
 					}}
 					getText={(key: string, ...args: Array<any>) => server.getLocaleText(req.locale, key, ...args)}
 					nonce={server.nonce}
+					theme={Plugin.theme}
 				/>,
 			),
 		);
