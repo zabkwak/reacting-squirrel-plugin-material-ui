@@ -84,6 +84,8 @@ export default class MaterialUIPlugin extends Plugin {
 			const themePath = this._getThemePath(server.appDirAbsolute);
 			if (themePath) {
 				const themeImport = path.relative(rsDir, themePath).replace(/\\/g, '/');
+				// const m = '../../../dist';
+				const m = 'reacting-squirrel-plugin-material-ui';
 				fs.writeFileSync(path.resolve(rsDir, 'mui.js'), `import ThemeProvider from '../../../dist/theme-provider';
 
 import theme from '${themeImport}';
