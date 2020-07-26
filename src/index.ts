@@ -4,7 +4,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import Server, { IMiddleware, Layout as RSLayout, Plugin } from 'reacting-squirrel/server';
 
-import Layout from './layout';
+import Layout, { IProps } from './layout';
 
 import RenderMiddleware from './middleware/render';
 import StyleMiddleware from './middleware/style';
@@ -172,4 +172,5 @@ ThemeProvider.setTheme(theme);`);
 
 export {
 	Layout,
+	IProps as ILayoutProps,
 };
