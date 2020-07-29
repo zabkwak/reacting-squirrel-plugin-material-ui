@@ -42,4 +42,4 @@ The theme is used by `ThemeProvider` on the server and client sides.
 | loadRoboto | boolean | Indicates if the Roboto font from the googleapis should be loaded. | `true` |
 | forcePluginLayout | boolean | Indicates if the Plugin layout should be forced if the layout provided is not extending the Plugin Layout. | `true` |
 | theme | string | Relative path to the theme from the app directory. | `null` |
-| forcePluginLayout | boolean | Indicates if the theme should be registered to the Layout using `eval`. It can be dangerous. | `true` |
+| evalServerTheme | boolean | Indicates if the theme should be registered to the Layout using `eval`. It can be dangerous. | `true` |

@@ -3,11 +3,11 @@ import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
 import * as React from 'react';
 import { ILayoutProps, Layout as Base } from 'reacting-squirrel/server';
 
-interface IProps extends ILayoutProps {
+export interface IProps<T = {}, U = {}> extends ILayoutProps<T, U> {
 	theme: ThemeOptions;
 }
 
-export default class Layout extends Base<IProps> {
+export default class Layout<P extends IProps = IProps> extends Base<P> {
 
 	protected _theme: Theme = createMuiTheme({ ...this.props?.theme, ...this._getTheme() });
 
