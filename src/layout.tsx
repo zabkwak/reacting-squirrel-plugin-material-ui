@@ -1,4 +1,4 @@
-import { CircularProgress, createMuiTheme, Theme, ThemeProvider } from '@material-ui/core';
+import { CircularProgress, createMuiTheme, Theme, ThemeProvider, Typography } from '@material-ui/core';
 import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
 import * as React from 'react';
 import { ILayoutProps, Layout as Base } from 'reacting-squirrel/server';
@@ -23,6 +23,7 @@ export default class Layout<P extends IProps = IProps> extends Base<P> {
 		return (
 			<div id="rs-main-loader">
 				<CircularProgress />
+				<Typography id="rs-bundle-progress">0%</Typography>
 			</div>
 		);
 	}
