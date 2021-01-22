@@ -9,7 +9,7 @@
 	],
 	"appDir": "./__tests__app__/app",
 	"staticDir": "./__tests__app__/public",
-	"dev": false,
+	"dev": true,
 	"createMissingComponents": true,
 	"cookies": {
 		"secure": false

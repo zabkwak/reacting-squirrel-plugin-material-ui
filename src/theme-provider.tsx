@@ -1,6 +1,10 @@
-import { createMuiTheme, Theme, ThemeOptions, ThemeProvider as MuiThemeProvider } from '@material-ui/core';
+import { createMuiTheme, Theme, ThemeOptions, ThemeProvider as MuiThemeProvider, StylesProvider, createGenerateClassName } from '@material-ui/core';
 
 import * as React from 'react';
+
+const generateClassName = createGenerateClassName({
+	productionPrefix: 'c-jss',
+});
 
 export default class ThemeProvider extends React.Component {
 
@@ -25,11 +29,15 @@ export default class ThemeProvider extends React.Component {
 	public render(): JSX.Element {
 		const { children } = this.props;
 		return (
-			<MuiThemeProvider
-				theme={ThemeProvider._theme}
+			<StylesProvider
+				generateClassName={generateClassName}
 			>
-				{children}
-			</MuiThemeProvider>
+				<MuiThemeProvider
+					theme={ThemeProvider._theme}
+				>
+					{children}
+				</MuiThemeProvider>
+			</StylesProvider>
 		);
 	}
 }

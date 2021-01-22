@@ -6,12 +6,13 @@ import * as React from 'react';
 import { Page } from 'reacting-squirrel';
 
 import ThemeProvider from '../../../dist/theme-provider';
+import ContentWrapper from '../components/content-wrapper';
 
 export default class HomePage extends Page {
 
 	public render(): JSX.Element {
 		return (
-			<>
+			<ContentWrapper>
 				<Grid container>
 					<Grid item xs>
 						<TextField
@@ -36,7 +37,7 @@ export default class HomePage extends Page {
 						>Change theme</Button>
 					</Grid>
 				</Grid>
-			</>
+			</ContentWrapper>
 		);
 	}
 }

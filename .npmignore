@@ -5,3 +5,4 @@
 /__tests__app__
 /tsconfig.json
 /package-lock.json
+/.env
