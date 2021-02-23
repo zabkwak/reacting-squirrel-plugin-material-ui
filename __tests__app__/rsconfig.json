@@ -18,7 +18,8 @@
 		[
 			"./dist",
 			{
-				"theme": "./theme.js"
+				"theme": "./theme.js",
+				"provider": "./provider"
 			}
 		]
 	]

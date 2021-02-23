@@ -33,6 +33,11 @@ export interface IOptions {
 	 * @default true
 	 */
 	evalServerTheme: boolean;
+	/**
+	 * Relative path to the provider from the app directory.
+	 * @default null
+	 */
+	provider: string;
 }
 
 export default class MaterialUIPlugin extends Plugin {
@@ -53,6 +58,7 @@ export default class MaterialUIPlugin extends Plugin {
 		forcePluginLayout: true,
 		loadRoboto: true,
 		theme: null,
+		provider: null,
 	};
 
 	constructor(options: Partial<IOptions>) {
@@ -78,19 +84,21 @@ export default class MaterialUIPlugin extends Plugin {
 				}
 			}
 		}
-		// TODO register custom provider
 		if (this._options.theme) {
 			const rsDir = path.resolve(server.appDirAbsolute, '~rs');
 			const themePath = this._getThemePath(server.appDirAbsolute);
+			const providerPath = this._getProviderPath(server.appDirAbsolute);
 			if (themePath) {
 				const themeImport = path.relative(rsDir, themePath).replace(/\\/g, '/');
-				// const m = '../../../';
-				const m = 'reacting-squirrel-plugin-material-ui';
+				const m = '../../../';
+				// const m = 'reacting-squirrel-plugin-material-ui';
 				fs.writeFileSync(path.resolve(rsDir, 'mui.js'), `import ThemeProvider from '${m}/dist/theme-provider';
 
 import theme from '${themeImport}';
+${providerPath ? `import Provider from '${path.relative(rsDir, providerPath).replace(/\\/g, '/')}';` : ''}
 
-ThemeProvider.setTheme(theme);`);
+ThemeProvider.setTheme(theme);
+${providerPath ? 'ThemeProvider.setProvider(Provider);' : ''}`);
 				if (this._options.evalServerTheme) {
 					const transpiled = this._tryTranspileTypescript(themePath) || this._tryTranspileEcmascript(themePath);
 					if (transpiled) {
@@ -156,7 +164,13 @@ ThemeProvider.setTheme(theme);`);
 			}
 		}
 		return null;
+	}
 
+	private _getProviderPath(appDir: string): string {
+		if (!this._options.provider) {
+			return null;
+		}
+		return path.resolve(appDir, this._options.provider);
 	}
 
 	private _tryTranspileTypescript(themePath: string): string {

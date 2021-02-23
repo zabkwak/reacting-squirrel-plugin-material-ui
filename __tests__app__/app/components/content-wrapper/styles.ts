@@ -16,5 +16,6 @@ export default (theme: Theme) => createStyles({
 		padding: theme.spacing(3),
 		width: ({ wrapper }: IProps) => `${wrapper}%`,
 		margin: '0 auto',
+		boxSizing: 'border-box',
 	},
 });

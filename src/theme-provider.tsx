@@ -12,6 +12,8 @@ export default class ThemeProvider extends React.Component {
 
 	private static _instance: ThemeProvider;
 
+	private static _provider: typeof React.Component;
+
 	public static changeTheme(theme: ThemeOptions): void {
 		this.setTheme(theme);
 		this._instance.forceUpdate();
@@ -19,6 +21,10 @@ export default class ThemeProvider extends React.Component {
 
 	public static setTheme(theme: ThemeOptions): void {
 		this._theme = createMuiTheme(theme);
+	}
+
+	public static setProvider(provider: typeof React.Component): void {
+		this._provider = provider;
 	}
 
 	public constructor(props: any) {
@@ -35,7 +41,15 @@ export default class ThemeProvider extends React.Component {
 				<MuiThemeProvider
 					theme={ThemeProvider._theme}
 				>
-					{children}
+					{
+						ThemeProvider._provider
+							? (
+								<ThemeProvider._provider>
+									{children}
+								</ThemeProvider._provider>
+							)
+							: children
+					}
 				</MuiThemeProvider>
 			</StylesProvider>
 		);
