@@ -32,7 +32,7 @@ export default class StyleStore {
 	public static toString(id: string, minify: boolean = false): string {
 		const stylesheet = this.get(id);
 		if (stylesheet) {
-			if (!minify) {
+			if (minify) {
 				const cleanCss = new CleanCSS();
 				return cleanCss.minify(stylesheet.toString()).styles;
 			}
