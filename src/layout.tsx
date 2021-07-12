@@ -1,5 +1,4 @@
-import { createMuiTheme, Theme, ThemeProvider } from '@material-ui/core';
-import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
+import { createMuiTheme, Theme, ThemeProvider, ThemeOptions } from '@material-ui/core';
 import * as React from 'react';
 import { ILayoutProps, Layout as Base } from 'reacting-squirrel/server';
 
