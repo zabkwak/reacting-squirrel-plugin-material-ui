@@ -1,4 +1,4 @@
-import { createMuiTheme, Theme, ThemeProvider, ThemeOptions } from '@material-ui/core';
+import { createTheme, Theme, ThemeProvider, ThemeOptions } from '@material-ui/core';
 import * as React from 'react';
 import { ILayoutProps, Layout as Base } from 'reacting-squirrel/server';
 
@@ -10,7 +10,7 @@ export interface IProps<T = {}, U = {}> extends ILayoutProps<T, U> {
 
 export default class Layout<P extends IProps = IProps> extends Base<P> {
 
-	protected _theme: Theme = createMuiTheme({ ...this.props?.theme, ...this._getTheme() });
+	protected _theme: Theme = createTheme({ ...this.props?.theme, ...this._getTheme() });
 
 	public renderContainer(): JSX.Element {
 		return (

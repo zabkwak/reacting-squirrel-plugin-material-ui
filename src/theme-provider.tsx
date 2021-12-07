@@ -1,4 +1,4 @@
-import { createMuiTheme, Theme, ThemeOptions, ThemeProvider as MuiThemeProvider, StylesProvider, createGenerateClassName } from '@material-ui/core';
+import { createTheme, Theme, ThemeOptions, ThemeProvider as MuiThemeProvider, StylesProvider, createGenerateClassName } from '@material-ui/core';
 
 import * as React from 'react';
 
@@ -8,7 +8,7 @@ const generateClassName = createGenerateClassName({
 
 export default class ThemeProvider extends React.Component {
 
-	private static _theme: Theme = createMuiTheme({});
+	private static _theme: Theme = createTheme({});
 
 	private static _instance: ThemeProvider;
 
@@ -20,7 +20,7 @@ export default class ThemeProvider extends React.Component {
 	}
 
 	public static setTheme(theme: ThemeOptions): void {
-		this._theme = createMuiTheme(theme);
+		this._theme = createTheme(theme);
 	}
 
 	public static setProvider(provider: typeof React.Component): void {

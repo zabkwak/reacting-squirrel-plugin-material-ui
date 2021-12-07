@@ -1,6 +1,6 @@
 import Button from '@material-ui/core/Button';
 
-import { Typography, Grid, TextField, createMuiTheme, colors } from '@material-ui/core';
+import { Typography, Grid, TextField, createTheme, colors } from '@material-ui/core';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { Page } from 'reacting-squirrel';

@@ -1,4 +1,4 @@
-import { createMuiTheme, ServerStyleSheets, ThemeProvider, Typography } from '@material-ui/core';
+import { createTheme, ServerStyleSheets, ThemeProvider, Typography } from '@material-ui/core';
 
 import * as md5 from 'md5';
 import * as React from 'react';
