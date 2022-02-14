@@ -1,10 +1,9 @@
-import { createTheme, ServerStyleSheets, ThemeProvider, Typography } from '@material-ui/core';
+import { ServerStyleSheets } from '@mui/styles';
 
-import * as md5 from 'md5';
-import * as React from 'react';
-import * as ReactDOMServer from 'react-dom/server';
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 import Server, { IRenderLayoutData, IRequest, IResponse } from 'reacting-squirrel/server';
-import * as uniqid from 'uniqid';
+import uniqid from 'uniqid';
 
 import StyleStore from '../style-store';
 import Plugin from '../';

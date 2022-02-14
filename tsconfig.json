@@ -5,7 +5,7 @@
         "removeComments": false,
         "preserveConstEnums": true,
         "outDir": "./dist",
-        "rootDir": "./src",
+		"rootDir": "./src",
         "sourceMap": true,
         "declaration": true,
         "target": "es6",
@@ -21,7 +21,8 @@
                 "configFile": "./tslint.json",
                 "suppressWhileTypeErrorsPresent": false
             }
-        ]
+        ],
+		"esModuleInterop": true
     },
     "exclude": [
         "./__tests__", "./__tests__app__"

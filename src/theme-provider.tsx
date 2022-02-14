@@ -1,6 +1,12 @@
-import { createTheme, Theme, ThemeOptions, ThemeProvider as MuiThemeProvider, StylesProvider, createGenerateClassName } from '@material-ui/core';
+import {
+	createTheme,
+	Theme,
+	ThemeOptions,
+	ThemeProvider as MuiThemeProvider,
+} from '@mui/material';
+import { StylesProvider, createGenerateClassName } from '@mui/styles';
 
-import * as React from 'react';
+import React from 'react';
 
 const generateClassName = createGenerateClassName({
 	productionPrefix: 'c-jss',

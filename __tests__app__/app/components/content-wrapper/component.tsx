@@ -1,4 +1,5 @@
-import { Box, LinearProgress, WithStyles } from '@material-ui/core';
+import { Box, LinearProgress } from '@mui/material';
+import { WithStyles } from '@mui/styles';
 
 import classnames from 'classnames';
 import React from 'react';
