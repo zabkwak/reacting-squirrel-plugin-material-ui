@@ -1,6 +1,7 @@
-import { CircularProgress, Typography, WithStyles } from '@material-ui/core';
+import { CircularProgress, Typography } from '@mui/material';
+import { WithStyles } from '@mui/styles';
 
-import * as React from 'react';
+import React from 'react';
 
 import styles from './styles';
 

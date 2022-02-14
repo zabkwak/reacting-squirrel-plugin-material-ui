@@ -1,7 +1,7 @@
-import { ThemeOptions } from '@material-ui/core';
+import { ThemeOptions } from '@mui/material';
 
-import * as fs from 'fs';
-import * as path from 'path';
+import fs, { promises as fsAsync } from 'fs';
+import path from 'path';
 import Server, { IMiddleware, Layout as RSLayout, Plugin } from 'reacting-squirrel/server';
 
 import Layout, { IProps } from './layout';
@@ -90,8 +90,8 @@ export default class MaterialUIPlugin extends Plugin {
 			const providerPath = this._getProviderPath(server.appDirAbsolute);
 			if (themePath) {
 				const themeImport = path.relative(rsDir, themePath).replace(/\\/g, '/');
-				// const m = '../../../';
-				const m = 'reacting-squirrel-plugin-material-ui';
+				const m = '../../../';
+				// const m = 'reacting-squirrel-plugin-material-ui';
 				fs.writeFileSync(path.resolve(rsDir, 'mui.js'), `import ThemeProvider from '${m}/dist/theme-provider';
 
 import theme from '${themeImport}';

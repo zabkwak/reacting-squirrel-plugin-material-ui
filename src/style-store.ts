@@ -1,6 +1,6 @@
-import { ServerStyleSheets } from '@material-ui/core';
-import * as CleanCSS from 'clean-css';
-import * as md5 from 'md5';
+import { ServerStyleSheets } from '@mui/styles';
+import CleanCSS from 'clean-css';
+import md5 from 'md5';
 
 export default class StyleStore {
 

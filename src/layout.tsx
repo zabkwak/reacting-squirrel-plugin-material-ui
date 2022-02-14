@@ -1,5 +1,5 @@
-import { createTheme, Theme, ThemeProvider, ThemeOptions } from '@material-ui/core';
-import * as React from 'react';
+import { createTheme, Theme, ThemeProvider, ThemeOptions } from '@mui/material';
+import React from 'react';
 import { ILayoutProps, Layout as Base } from 'reacting-squirrel/server';
 
 import Loader from './components/loader';
