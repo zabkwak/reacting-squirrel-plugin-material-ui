@@ -39,6 +39,12 @@ export default (server: Server) => (req: IRequest, res: IResponse, next: () => v
 					getText={(key: string, ...args: Array<any>) => server.getLocaleText(req.locale, key, ...args)}
 					nonce={server.nonce}
 					theme={Plugin.theme}
+					componentWrappers={
+						server
+							.getRegisteredComponents()
+							.filter(({ auto }) => auto)
+							.map(({ elementId }) => elementId)
+					}
 				/>,
 			),
 		);
